@@ -13,7 +13,7 @@ RPC.register("np-music:openApp", function(pSource)
 end)
 
 RPC.register("np-music:closeApp", function(pSource)
-    exports["np-ui"]:closeApplication("musicplayer", true)
+    exports["np-ui"]:closeApplication("musicplayer") -- Edit: removed true because we have already 'show = false' in the callback so no need to true.
 end)
 
 RPC.register("np-music:addMusicEntry", function(pSource, data, cb)
